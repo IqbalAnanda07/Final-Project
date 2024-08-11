@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'Romance';
+            src: url('romance.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: rgb(204, 136, 136);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .content {
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content h1 {
+            font-family: 'Romance', sans-serif;
+            font-size: 6rem;
+            margin-bottom: -20px;
+        }
+
+        .section img {
+            width: 300px;
+            height: auto;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 20px;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .section.mb-5 {
+            margin-bottom: 0;
+        }
+
+        .audio-section {
+            margin-top: 0;
+        }
+
+        .audio-section audio {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .separator {
+            margin: 600px 0;
+        }
+
+        .full-width-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .full-width-image {
+            width: 50vw;
+            height: auto;
+            display: block;
+            margin: 0;
+        }
+
+        .caption {
+            font-size: 54px;
+            font-family: 'Romance', sans-serif;
+            color: white;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .caption2 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            margin-top: -10px;
+            text-align: center;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .button-yes {
+            background-color: #28a745; /* Warna hijau untuk tombol Yes */
+        }
+
+        .button-no {
+            background-color: #dc3545; /* Warna merah untuk tombol No */
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Styling untuk gambar */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 1000;
+            display: none;
+            text-align: center; /* Center text inside the popup */
+        }
+
+        .popup img, .popup video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .popup .label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container content">
+        <h1>Haiiiii min...</h1>
+        
+        <div class="section mb-5">
+            <h2></h2>
+            <img src="spidermanlove.png" style="width: 300px; height: auto;" alt="Gambar Pertama">
+            <p></p>
+        </div>
+
+        <div class="section audio-section mb-5">
+            <h2>Play dong audio yang dibawah.....</h2>
+            <audio controls>
+                <source src="gone.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+            <p>Biar suasananya tidak tegang.....</p>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <div class="section mb-5">
+            <h2>Bagian 3: Dari Hati ke Hati</h2>
+            <p>Hai Laila,</p>
+            <p>Beberapa hari yang lalu, kita sudah ngobrol panjang lebar tentang berbagai hal, termasuk perasaan aku yang sebenarnya. Awalnya, aku merasa seperti tidak mungkin untuk mengungkapkan semuanya, tetapi ternyata kamu bisa menerima dan memahami perasaanku dengan baik.</p>
+            <p>Kemarin, setelah kita berbicara secara mendalam, aku merasa kehabisan kata-kata untuk mengungkapkan semua ini secara lebih jelas. Jadi, aku akan langsung saja: aku benar-benar menghargai hubungan kita dan perasaan yang ada di antara kita.</p>
+            <p>Aku berharap kita bisa melanjutkan perjalanan ini bersama dan menjalin hubungan yang lebih dalam. Terima kasih telah mendengarkan dan menerima perasaanku. Aku sangat menghargai kamu dan segala sesuatu yang kita miliki bersama.</p>
+            <p>Dengan semua perasaanku,</p>
+            <p>Ananda</p>
+        </div>
+    </div>
+
+    <!-- Gambar Full Width di bawah container dengan teks di bawah gambar -->
+    <div class="full-width-image-container">
+        <img src="spiderandgwen.jpg" class="full-width-image" alt="Gambar Kedua">
+        <p class="caption">Will you be my Spider-Gwen</p>
+        <p class="caption2">???</p>
+    </div>
+
+    <!-- Tombol Yes dan No -->
+    <div class="button-container">
+        <button class="button-yes" onclick="showYesContent()">Yes</button>
+        <button class="button-no" onclick="showNoContent()">No</button>
+    </div>
+
+    <!-- Pop-up untuk Yes -->
+    <div id="yes-popup" class="popup">
+        <span class="close" onclick="closePopup('yes-popup')">&times;</span>
+        <div class="label">Maaaaciii</div>
+        <img src="spidermancross.jpeg" alt="Gambar untuk Yes">
+    </div>
+
+    <!-- Pop-up untuk No -->
+    <div id="no-popup" class="popup">
+        <span class="close" onclick="closePopup('no-popup')">&times;</span>
+        <div class="label">Sekian dan terima kasih untuk waktunya</div>
+        <img src="spidersad.gif" alt="GIF untuk No">
+    </div>
+
+    <script>
+        function showYesContent() {
+            document.getElementById('yes-popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('no-popup').style.display = 'none';
+        }
+
+        function showNoContent() {
+            document.getElementById('no-popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('yes-popup').style.display = 'none';
+            // Menutup jendela setelah 5 detik
+            setTimeout(function() {
+                window.close();
+            }, 5000);
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
